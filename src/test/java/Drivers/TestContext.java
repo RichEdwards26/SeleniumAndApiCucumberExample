@@ -11,14 +11,14 @@ public class TestContext {
     // ...one day... browser powered: public String browser = "chrome";
 
     private String baseUrl = "https://angularjs.realworld.io/#/";
+    private String apiBaseUrl = "https://conduit.productionready.io/api/";
     private WebDriver driver;
     private String ApiToken;
+    private String Cookie;
 
     public TestContext(){
         //do any import settings from a external source
-        //CreateWebDriver();
-        String x = "123";
-    }
+     }
 
     public void CreateWebDriver()
     {
@@ -50,4 +50,20 @@ public class TestContext {
 
     public String getApiToken() { return ApiToken; }
     public void setApiToken(String apiToken) { ApiToken = apiToken; }
+
+    public String getApiBaseUrl() {
+        return apiBaseUrl;
+    }
+
+    public void setApiBaseUrl(String apiBaseUrl) {
+        this.apiBaseUrl = apiBaseUrl;
+    }
+
+    public String getCookie() {
+        return Cookie;
+    }
+
+    public void setCookie(String cookie) {
+        Cookie = cookie;
+    }
 }

@@ -17,15 +17,16 @@ public class SignUpApi {
 
 
     public ValidatedUser SignUp(Register register) {
-        register.getUser().generateRandomuserDetails();
+        //register.getUser().generateRandomuserDetails();
         Gson gson = new Gson();
         ApiHelper api = new ApiHelper();
-        api.createPostRequest(gson.toJson(register), "https://conduit.productionready.io/api/users");
+        api.createPostRequest(gson.toJson(register), testContext.getApiBaseUrl() + "users/");
 
         String response = api.executePost();
         ValidatedUser validatedUser = new ValidatedUser();
         validatedUser = gson.fromJson(response, new ValidatedUser().getClass());
 
+        testContext.setCookie(api.GetCookieHeadersFromResponse());
         testContext.setApiToken(validatedUser.getUser().getToken());
         return validatedUser;
     }

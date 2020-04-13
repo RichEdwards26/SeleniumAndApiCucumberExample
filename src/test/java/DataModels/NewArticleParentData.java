@@ -3,22 +3,22 @@ package DataModels;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ArticleParentData {
+public class NewArticleParentData {
     @SerializedName("article")
     @Expose
-    private ArticleData article;
+    private NewArticleData article;
 
-    public ArticleData getArticle() {
+    public NewArticleData getArticle() {
         return article;
     }
 
-    public void setArticle(ArticleData article) {
+    public void setArticle(NewArticleData article) {
         this.article = article;
     }
 
-    public ArticleParentData()
+    public NewArticleParentData()
     {
-        article = new ArticleData();
+        article = new NewArticleData();
     }
 
 }
