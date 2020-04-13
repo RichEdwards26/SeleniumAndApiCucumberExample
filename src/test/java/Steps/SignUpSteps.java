@@ -10,10 +10,12 @@ public class SignUpSteps {
 
     private TestContext testContext;
     private SignUpPage signupPage;
-    public SignUpSteps(TestContext testContext, SignUpPage signupPage)
+    private Register register;
+    public SignUpSteps(TestContext testContext, SignUpPage signupPage,Register register)
     {
         this.testContext = testContext;
         this.signupPage = signupPage;
+        this.register = register;
     }
     @Given("I am on the signup page")
     public void i_am_on_the_signup_page() {
@@ -23,7 +25,7 @@ public class SignUpSteps {
 
     @When("I complete the signup form with unique details and press submit")
     public void i_complete_the_signup_form_with_unique_details_and_press_submit() {
-        Register register = new Register();
+        //Register register = new Register();
         register.getUser().generateRandomuserDetails();
         signupPage.CompleteSignUpForm(
                 register.getUser().getUsername(),
