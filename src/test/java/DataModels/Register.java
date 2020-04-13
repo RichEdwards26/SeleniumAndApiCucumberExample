@@ -6,16 +6,16 @@ import com.google.gson.annotations.SerializedName;
 public class Register {
     @SerializedName("user")
     @Expose
-    private UserData userData;
+    private RegisterUserData registerUserData;
 
-    public UserData getUser() {
-        return userData;
+    public RegisterUserData getUser() {
+        return registerUserData;
     }
-    public void setUser(UserData userData) {
-        this.userData = userData;
+    public void setUser(RegisterUserData registerUserData) {
+        this.registerUserData = registerUserData;
     }
 
     public Register() {
-        userData = new UserData();
+        registerUserData = new RegisterUserData();
     }
 }

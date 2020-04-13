@@ -12,6 +12,7 @@ public class TestContext {
 
     private String baseUrl = "https://angularjs.realworld.io/#/";
     private WebDriver driver;
+    private String ApiToken;
 
     public TestContext(){
         //do any import settings from a external source
@@ -46,4 +47,7 @@ public class TestContext {
     private void setBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
     }
+
+    public String getApiToken() { return ApiToken; }
+    public void setApiToken(String apiToken) { ApiToken = apiToken; }
 }

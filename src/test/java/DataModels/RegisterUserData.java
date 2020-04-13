@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
-public class UserData {
+public class RegisterUserData {
 
     @SerializedName("email")
     @Expose
