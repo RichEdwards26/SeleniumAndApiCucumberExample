@@ -10,14 +10,13 @@ public class CucumberHooks {
         this.test = test;
     }
 
-    @Before
+    @Before("@gui")
     public void Before()
     {
-        String x = "a";
         test.CreateWebDriver();
     }
 
-    @After
+    @After("@gui")
     public void After()
     {
         test.CloseAndQuitWebDriver();

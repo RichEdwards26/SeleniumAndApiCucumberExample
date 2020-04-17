@@ -14,8 +14,8 @@ public class HomePage extends PageBase {
     }
 
     public boolean usernameLinkExists(String username) throws InterruptedException {
-        Thread.sleep(3000); // to be replaced with real sync
-        WebElement userLink = driver.findElement(By.xpath("//a[contains(text(),'"+ username +"']"));
+        Thread.sleep(5000); // to be replaced with real sync
+        WebElement userLink = driver.findElement(By.xpath("//a[contains(@href,'"+ username +"']"));
         return userLink.isDisplayed();
     }
 }
